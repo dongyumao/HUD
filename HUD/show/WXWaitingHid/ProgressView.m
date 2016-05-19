@@ -99,7 +99,7 @@
 	CGContextRestoreGState(context);
 	[_unOnColor getRed:&r green:&g blue:&b alpha:&alpha];
 	CGContextSetRGBStrokeColor(context,r,g,b,alpha);
-	for (int i = _currentProgress; i < _nodeNumber; i++) {
+	for (NSInteger i = _currentProgress; i < _nodeNumber; i++) {
 		CGFloat startAngle = _cellArc*i - M_PI_2;
 		CGContextAddArc(context, x, y, _radius - _arcLineWidth, startAngle,startAngle + _solidArc, 0);
 		CGContextStrokePath(context);
